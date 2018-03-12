@@ -6,10 +6,10 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">DEVICE</a>
+      <a class="main-header-logo"><span class="visually-hidden">DEVICE</span></a>
       <div class="navigation-top">
         <form class="header-form-search" action="https://echo.htmlacademy.ru" method="get">
-          <input type="search" name="search-field" placeholder="Поиск по сайту">
+          <input type="search" name="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
           <input type="submit" value="Найти">
         </form>
         <ul class="header-user-block">
@@ -46,13 +46,18 @@
     <main>
       <section class="product-slider">
         <h2 class="visually-hidden">Слайдер товаров</h2>
+        <ul>
+          <li class="slider-item-input"><input id="slider-1" type="radio" name="slider-group" value="slider-1" checked></li>
+          <li class="slider-item-input"><input id="slider-2" type="radio" name="slider-group" value="slider-2"></li>
+          <li class="slider-item-input"><input id="slider-3" type="radio" name="slider-group" value="slider-3"></li>
+        </ul>
         <div class="slider-list-button">
-          <label for="slider-1"></label>
-          <label for="slider-2"></label>
-          <label for="slider-3"></label>
+          <label for="slider-1"><span class="visually-hidden">Слайд 1</span></label>
+          <label for="slider-2"><span class="visually-hidden">Слайд 2</span></label>
+          <label for="slider-3"><span class="visually-hidden">Слайд 3</span></label>
         </div>
         <ul class="product-slider-list">
-          <li class="slider-item" id="slider-1">
+          <li class="slider-item slider-item-1">
             <div class="slider-img">
               <img src="img/slider-1.png" alt="Слайдер 1" width="384" height="486">
             </div>
@@ -79,7 +84,7 @@
               </ul>
             </div>
           </li>
-          <li class="slider-item" id="slider-2">
+          <li class="slider-item slider-item-2">
             <div class="slider-img">
               <img src="img/slider-2.png" alt="Сладер 2" width="345" height="485">
             </div>
@@ -98,7 +103,7 @@
               </ul>
             </div>
           </li>
-          <li class="slider-item" id="slider-3">
+          <li class="slider-item slider-item-3">
             <div class="slider-img">
               <img src="img/slider-3.png" alt="Сладер 3" width="526" height="334">
             </div>
@@ -123,52 +128,57 @@
           </li>
         </ul>
       </section>
-      <section class="catalog">
+      <section class="populars">
         <h2 class="visually-hidden">Каталог товаров</h2>
-        <a class="catalog-item" href="#">
+        <a class="populars-item" href="#">
           <img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">
           <h3>Виртуальная реальность</h3>
         </a>
-        <a class="catalog-item" href="inner.html">
+        <a class="populars-item" href="inner.html">
           <img src="img/popular-2.svg" alt="Монопады для селфи" width="86" height="117">
           <h3>Монопады для селфи</h3>
         </a>
-        <a class="catalog-item" href="#">
+        <a class="populars-item" href="#">
           <img src="img/popular-3.svg" alt="Экши-катеры" width="71" height="87">
           <h3>Экши-камеры</h3>
         </a>
-        <a class="catalog-item" href="#">
+        <a class="populars-item" href="#">
           <img src="img/popular-4.svg" alt="Фитнес-браслеты" width="107" height="65">
           <h3>Фитнес-браслеты</h3>
         </a>
-        <a class="catalog-item" href="#">
+        <a class="populars-item" href="#">
           <img src="img/popular-5.svg" alt="Умные часы" width="56" height="98">
           <h3>Умные часы</h3>
         </a>
-        <a class="catalog-item" href="#">
+        <a class="populars-item" href="#">
           <img src="img/popular-6.svg" alt="Квадрокоптеры" width="132" height="69">
           <h3>Квадрокоптеры</h3>
         </a>
       </section>
       <section class="services">
         <h2 class="visually-hidden">Сервисы</h2>
+        <ul>
+          <li class="services-item-input"><input class="visually-hidden" id="delivery" type="radio" name="services-group" value="delivery" checked></li>
+          <li class="services-item-input"><input class="visually-hidden" id="warranty" type="radio" name="services-group" value="warranty"></li>
+          <li class="services-item-input"><input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit"></li>
+        </ul>
         <div class="services-button">
           <label for="delivery" class="services-button-current" tabindex="0">Доставка</label>
           <label for="warranty" tabindex="0">Гарантия</label>
           <label for="credit" tabindex="0">Кредит</label>
         </div>
         <ul class="services-list">
-          <li class="services-item services-item-current" id="delivery">
+          <li class="services-item service-item-delivery services-item-current">
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="services-item" id="warranty">
+          <li class="services-item service-item-warranty">
             <h3>Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
           </li>
-          <li class="services-item" id="credit">
+          <li class="services-item service-item-credit">
             <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -177,10 +187,10 @@
       </section>
       <section class="logotypes">
         <h2 class="visually-hidden">Логотипы</h2>
-        <a class="logotypes-item logo-dji" href="#">DJI</a>
-        <a class="logotypes-item logo-spgadgets" href="#">SP Gadgets</a>
-        <a class="logotypes-item logo-gopro" href="#">GoPro</a>
-        <a class="logotypes-item logo-vive" href="#">Vivi</a>
+        <a class="logotypes-item logo-dji" href="#"><img src="img/logo-1-color.png" alt="DJI" width="260" height="100">        </a>
+        <a class="logotypes-item logo-spgadgets" href="#"><img src="img/logo-2-color.png" alt="SP Gadgets" width="260" height="100"></a>
+        <a class="logotypes-item logo-gopro" href="#"><img src="img/logo-3-color.png" alt="GoPro" width="260" height="100"></a>
+        <a class="logotypes-item logo-vive" href="#"><img src="img/logo-4-color.png" alt="Vivi" width="260" height="100"></a>
       </section>
       <section class="main-content">
         <div class="info">
@@ -199,14 +209,16 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
             бывает.</p>
-          <img src="img/map.jpg" alt="Офис находится по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
-          <a class="button" href="#">Напишите нам</a>
+          <a id="js-view-map" href="#">
+            <img src="img/map.jpg" alt="Офис находится по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
+          </a>
+          <a class="button" id="js-us" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
     <footer class="main-footer">
       <section class="main-footer-left">
-        <a class="main-footer-logo">DEVICE</a>
+        <a class="main-footer-logo"><span class="visually-hidden">DEVICE</span></a>
         <p class="main-footer-address">г. Москва, ул. Строителей, 15</p>
       </section>
       <section class="main-footer-center">
@@ -216,9 +228,9 @@
           <li><a href="#">Контакты</a></li>
         </ul>
         <div class="main-footer-social">
-          <a class="social-btn social-btn-fb" href="#">Файсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстограм</a>
-          <a class="social-btn social-btn-tw" href="#">Твитер</a>
+          <a class="social-btn social-btn-fb" href="#"><span class="visually-hidden">Файсбук</span></a>
+          <a class="social-btn social-btn-inst" href="#"><span class="visually-hidden">Инстограм</span></a>
+          <a class="social-btn social-btn-tw" href="#"><span class="visually-hidden">Твитер</span></a>
         </div>
       </section>
       <section class="main-footer-right">
@@ -228,34 +240,27 @@
           <li class="footer-user-cart"><a href="#">Корзина</a></li>
         </ul>
         <p class="main-footer-phone">Тел.: +7 (495) 495-95-95</p>
-        <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Сайт HTML Academy</a>
+        <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><span class="visually-hidden">Сайт HTML Academy</span></a>
       </section>
     </footer>
 
-    <section class="modal modal-send-message">
+    <div class="modal modal-send-message">
       <h2 class="visually-hidden">Отправить сообщение</h2>
       <form class="send-message-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="message-user">
-          <label for="user-input">Ваше имя:</label>
-          <input class="message-input-text" id="user-input" name="user" type="text" placeholder="Имя Фамилия">
-        </p>
-        <p class="message-email">
-          <label for="email-input">Ваш e-mail:</label>
-          <input class="message-input-text" id="email-input" name="email" type="text" placeholder="email@example.com">
-        </p>
-        <p class="message-text">
-          <label for="text-input">Текст письма:</label>
-          <textarea class="message-textarea" id="text-input" name="message" placeholder="В свободной форме"></textarea>
-        </p>
+        <div class="message-wrapper">
+          <label for="user-input">Ваше имя:<input class="message-input-text" id="user-input" name="user" type="text" placeholder="Имя Фамилия"></label>
+          <label for="email-input">Ваш e-mail:<input class="message-input-text" id="email-input" name="email" type="text" placeholder="email@example.com"></label>
+        </div>
+        <label for="text-input">Текст письма:<textarea class="message-textarea" id="text-input" name="message" placeholder="В свободной форме"></textarea></label>
         <button class="button" type="submit">Отправить</button>
       </form>
-      <button class="modal-close">Закрыть форму</button>
-    </section>
+      <button class="modal-close"><span class="visually-hidden">Закрыть форму</span></button>
+    </div>
 
-    <section class="modal modal-map">
+    <div class="modal modal-map">
       <h2 class="visually-hidden">Где мы находимся</h2>
       <img src="img/map.jpg" width="560" height="222" alt="Мы находимся по аресу г. Москва, ул. Строителей, 15">
-      <button class="modal-close">Закрыть карту</button>
-    </section>
+      <button class="modal-close"><span class="visually-hidden">Закрыть карту</span></button>
+    </div>
   </body>
 </html>
