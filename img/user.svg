@@ -1,8 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
-<path fill="#272525" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <symbol id="user" viewBox="0 0 13 12">
+        <path d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
 	C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
+    </symbol>
+
+    <symbol id="compare" viewBox="0 0 13 12">
+        <rect x="8" y="2" width="1.984" height="8"/>
+        <rect y="3" width="1.984" height="7"/>
+        <rect x="4" width="2" height="10"/>
+    </symbol>
+
+    <view id="user" viewBox="0 0 13 12" />
+    <view id="user-yellow" viewBox="0 15 13 12" />
+
+
+    <use xlink:href="#user" width="12" height="13" x="0" y="0"></use>
+    <use xlink:href="#user" style="fill: #f0c52e;" width="13" height="12" x="0" y="15"></use>
 </svg>

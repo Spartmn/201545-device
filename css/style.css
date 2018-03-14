@@ -50,6 +50,8 @@ a {
 .button {
   font: inherit;
   color: #000000;
+  text-transform: uppercase;
+  border: none;
 }
 
 .button:hover,
@@ -66,17 +68,21 @@ a {
   background-color: #f7e296;
 }
 
-.main-header-logo {
+.main-header-logo,
+.main-footer-logo {
   font-size: 48px;
   line-height: 48px;
 }
 
 .main-header-logo:hover,
-.main-header-logo:focus {
+.main-header-logo:focus,
+.main-footer-logo:hover,
+.main-footer-logo:focus {
   opacity: 0.6;
 }
 
-.main-header-logo:active {
+.main-header-logo:active,
+.main-footer-logo:active {
   opacity: 0.3;
 }
 
@@ -247,3 +253,206 @@ a {
   text-transform: none;
 }
 /*--MAIN END--*/
+
+/*--FOOTER BEGIN--*/
+.main-footer {
+  background-color: #464646;
+
+}
+
+.main-footer-logo {
+  color: #ffc600;
+}
+
+.main-footer-address,
+.main-footer-phone,
+.footer-user-block a {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.main-footer-menu,
+.footer-user-block {
+  list-style: none;
+}
+
+.footer-user-block a {
+  opacity: 0.7;
+}
+
+.footer-user-block a:hover {
+  opacity: 1;
+}
+
+.footer-user-enter a::before {
+  content: "";
+  float: left;
+  background-image: url("../img/user.svg#user-yellow");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 13px;
+  height: 13px;
+}
+
+.footer-user-compare a::before {
+  content: "";
+  float: left;
+  background-image: url("../img/compare.svg#compare-yellow");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 13px;
+  height: 13px;
+}
+
+.footer-user-cart a::before {
+  content: "";
+  float: left;
+  background-image: url("../img/cart.svg#cart-yellow");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 13px;
+  height: 13px;
+}
+
+.footer-user-enter a:hover::before,
+.footer-user-enter a:focus::before,
+.footer-user-compare a:hover::before,
+.footer-user-compare a:focus::before,
+.footer-user-cart a:hover::before,
+.footer-user-cart a:focus::before{
+  opacity: 0.6;
+}
+
+.footer-user-enter a:active,
+.footer-user-compare a:active,
+.footer-user-cart a:active {
+  opacity: 0.3;
+}
+
+.main-footer-menu a {
+  color: #ffffff;
+}
+
+.main-footer-menu a:hover,
+.main-footer-menu a:focus {
+  opacity: 0.6;
+}
+
+.main-footer-menu a:active {
+  opacity: 0.3;
+}
+
+.social-btn-fb::before {
+  content: "";
+  float: left;
+  background-image: url("../img/fb.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.social-btn-inst::before {
+  content: "";
+  float: left;
+  background-image: url("../img/inst.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.social-btn-tw::before {
+  content: "";
+  float: left;
+  background-image: url("../img/tw.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.social-btn-fb:hover::before,
+.social-btn-fb:focus::before,
+.social-btn-inst:hover::before,
+.social-btn-inst:focus::before,
+.social-btn-tw:hover::before,
+.social-btn-tw:focus::before {
+  opacity: 0.6;
+}
+
+.social-btn-fb:active::before,
+.social-btn-inst:active::before,
+.social-btn-tw:active::before {
+  opacity: 0.1;
+}
+
+.logo-htmlacademy::before {
+  content: "";
+  float: left;
+  background-image: url("../img/logo-html.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 27px;
+  height: 35px;
+}
+
+.logo-htmlacademy:hover::before,
+.logo-htmlacademy:focus::before {
+  opacity: 0.6;
+}
+
+.logo-htmlacademy:active::before {
+  opacity: 0.3;
+}
+/*--FOOTER END--*/
+
+/*--MODAL BEGIN--*/
+.modal-close::before {
+  content: "";
+  float: left;
+  background-image: url("../img/modal-close.svg");
+  width: 55px;
+  height: 55px;
+  opacity: 0.5;
+}
+
+.modal-close:hover::before,
+.modal-close:focus::before {
+  opacity: 1;
+}
+
+.modal-close:active::before {
+  opacity: 0.3;
+}
+
+.send-message-form label {
+  text-transform: none;
+}
+
+.send-message-form input {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(229, 229, 229, 0.5);
+}
+
+.send-message-form input:hover {
+  opacity: 0.8;
+}
+
+.send-message-form textarea {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(229, 229, 229, 0.5);
+}
+/*--MODAL END*/
