@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Девайс - Каталог</title>
   </head>
   <body>
@@ -66,14 +68,14 @@
               </div>
               <div class="filter-range-value">
                 <label class="range-min-price">от <input type="text" name="min-price" value="0"></label>
-                <label class="range-max-price">от <input type="text" name="max-price" value="5000"></label>
+                <label class="range-max-price">до <input type="text" name="max-price" value="5000"></label>
               </div>
             </fieldset>
             <fieldset class="filter-color">
               <legend>Цвет</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" id="color-input-black" name="color-black" type="checkbox" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-black" name="color-black" type="checkbox" checked>
                   <label for="color-input-black">Черный</label>
                 </li>
                 <li class="filter-option">
@@ -81,11 +83,11 @@
                   <label for="color-input-white">Белый</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" id="color-input-blue" name="color-blue" type="checkbox" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-blue" name="color-blue" type="checkbox" checked>
                   <label for="color-input-blue">Синий</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" id="color-input-red" name="color-red" type="checkbox" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-red" name="color-red" type="checkbox" checked>
                   <label for="color-input-red">Красный</label>
                 </li>
                 <li class="filter-option">
@@ -98,12 +100,12 @@
               <legend>Bluetooth</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-radio" id="bluetooth-yes" type="radio" name="bluetooth-group" value="yes" checked>
+                  <input class="visually-hidden filter-input-radio filter-input-radio-checked" id="bluetooth-yes" type="radio" name="bluetooth-group" value="yes" checked>
                   <label for="bluetooth-yes">Есть</label>
                 </li>
                 <li class="filter-option">
                   <input class="visually-hidden filter-input-radio" id="bluetooth-no" type="radio" name="bluetooth-group" value="no">
-                  <label for="bluetooth-no">Есть</label>
+                  <label for="bluetooth-no">Нет</label>
                 </li>
               </ul>
             </fieldset>
@@ -163,7 +165,7 @@
                 <span class="catalog-item-price">2500 руб.</span>
               </div>
             </article>
-            <article class="catalog-item">
+            <article class="catalog-item catalog-item-new">
               <div class="catalog-item-hover">
                 <a class="btn" href="#">В корзину</a>
                 <a class="btn-compare" href="#">Добавить к сравнению</a>
