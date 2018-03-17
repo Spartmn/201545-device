@@ -1,10 +1,10 @@
-/*-INDEX PAGE BEGIN-*/
+/*-TODO-INDEX PAGE BEGIN-*/
 
 @font-face {
   font-family: "Gilroy ExtraBold";
   src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
       url("../fonts/gilroyextrabold.woff") format("woff");
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -12,7 +12,7 @@
   font-family: "Gilroy Light";
   src: url("../fonts/gilroylight.woff2") format("woff2"),
       url("../fonts/gilroylight.woff") format("woff");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -20,7 +20,7 @@
   font-family: "Open Sans";
   src: url("../fonts/opensans.woff2") format("woff2"),
       url("../fonts/opensans.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -28,7 +28,7 @@
   font-family: "Open Sans Light";
   src: url("../fonts/opensanslight.woff2") format("woff2"),
       url("../fonts/opensanslight.woff") format("woff");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -36,7 +36,8 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
@@ -70,7 +71,7 @@ a {
   color: rgba(255,255,255,0.3);
 }
 
-/* ---HEADER BEGIN---*/
+/* --TODO-HEADER BEGIN--*/
 .main-header {
   background-color: #f7e296;
 }
@@ -95,7 +96,8 @@ a {
 
 .navigation-top,
 .menu-catalog-hover {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   text-align: left;
@@ -134,7 +136,7 @@ a {
 }
 /*--HEADER END--*/
 
-/*--MAIN BEGIN--*/
+/*--TODO-MAIN BEGIN--*/
 .product-slider ul {
   list-style: none;
 }
@@ -155,14 +157,16 @@ a {
 }
 
 .slider-desc p {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   text-transform: none;
 }
 
 .slider-features .slider-feature-value {
-  font-family: "Gilroy Light", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
   font-size: 36px;
   line-height: 48px;
 }
@@ -191,8 +195,8 @@ a {
   background-color: rgba(240, 197, 46, 1);
 }
 
-.populars-item img:active {
-  filter: opacity(0.3);
+.populars-item div:active img {
+  opacity: 0.3;
 }
 
 .services {
@@ -225,7 +229,8 @@ a {
 }
 
 .services-item p {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   text-transform: none;
@@ -247,7 +252,8 @@ a {
 }
 
 .main-content p {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   text-transform: none;
@@ -261,7 +267,7 @@ a {
 }
 /*--MAIN END--*/
 
-/*--FOOTER BEGIN--*/
+/*--TODO-FOOTER BEGIN--*/
 .main-footer {
   background-color: #464646;
 
@@ -274,7 +280,8 @@ a {
 .main-footer-address,
 .main-footer-phone,
 .footer-user-block a {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   text-transform: none;
@@ -420,7 +427,12 @@ a {
 }
 /*--FOOTER END--*/
 
-/*--MODAL BEGIN--*/
+/*--TODO-MODAL BEGIN--*/
+.modal-close {
+  border-style: none;
+  background: none;
+}
+
 .modal-close::before {
   content: "";
   float: left;
@@ -443,29 +455,47 @@ a {
   text-transform: none;
 }
 
-.send-message-form input {
+.message-input-text,
+.message-textarea {
   font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: rgba(70, 70, 70, 0.4);
   background-color: rgba(229, 229, 229, 0.5);
 }
 
-.send-message-form input:hover {
-  opacity: 0.8;
+.message-input-text:hover,
+.message-textarea:hover {
+  outline: none;
+  background-color: rgba(229, 229, 229, 0.8);
 }
 
-.send-message-form textarea {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(70, 70, 70, 0.4);
-  background-color: rgba(229, 229, 229, 0.5);
+.message-input-text:focus,
+.message-textarea:focus {
+  outline: none;
+  background: none;
+  border: 3px solid rgba(240, 197, 46,0.5);
+}
+
+.message-input-text:focus::-webkit-input-placeholder,
+.message-textarea:focus::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.message-input-text:focus::-moz-placeholder,
+.message-textarea:focus::-moz-placeholder  {
+  color: rgba(70, 70, 70, 1);
+}
+
+.message-input-text:focus:-ms-input-placeholder,
+.message-textarea:focus:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 1);
 }
 /*--MODAL END--*/
-/*-INDEX PAGE END-*/
+/*-TODO-INDEX PAGE END-*/
 
-/*-INNER PAGE BEGIN-*/
+/*-TODO-INNER PAGE BEGIN-*/
 .page-title {
   font-size: 47px;
   line-height: 48px;
@@ -473,7 +503,8 @@ a {
 
 .breadcrumbs {
   list-style: none;
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   text-transform: none;
@@ -528,7 +559,8 @@ a {
 }
 
 .filter-option label {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 40px;
   text-transform: none;
@@ -555,7 +587,8 @@ a {
 }
 
 .filter-range-value {
-  font-family: "Gilroy Light", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   text-transform: none;
@@ -597,6 +630,7 @@ a {
 
 .catalog-sorting li{
   font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   text-transform: none;
@@ -643,7 +677,8 @@ a {
 }
 
 .btn-compare {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 13px;
   line-height: 20px;
   color: #000000;
@@ -666,7 +701,8 @@ a {
 }
 
 .catalog-item-price {
-  font-family: "Gilroy Light", Arial,sans-serif;
+  font-family: "Gilroy", Arial,sans-serif;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   text-transform: none;
@@ -674,7 +710,8 @@ a {
 
 .catalog-item-new::before {
   content: "NEW";
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 14px;
   line-height: 24px;
   float: left;
