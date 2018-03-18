@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo"><span class="visually-hidden">DEVICE</span></a>
+      <a class="main-header-logo"><span class="visually-hidden1">DEVICE</span></a>
       <div class="navigation-top">
         <form class="header-form-search" action="https://echo.htmlacademy.ru" method="get">
           <input class="header-search-field" type="search" name="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
@@ -45,7 +45,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="conteiner">
       <section class="product-slider">
         <h2 class="visually-hidden">Слайдер товаров</h2>
         <ul>
@@ -165,9 +165,9 @@
           <li class="services-item-input"><input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit"></li>
         </ul>
         <div class="services-button">
-          <label for="delivery" class="services-button-current" tabindex="0">Доставка</label>
-          <label for="warranty" tabindex="0">Гарантия</label>
-          <label for="credit" tabindex="0">Кредит</label>
+          <label for="delivery" class="button services-button-current" tabindex="0">Доставка</label>
+          <label for="warranty" class="button" tabindex="0">Гарантия</label>
+          <label for="credit" class="button" tabindex="0">Кредит</label>
         </div>
         <ul class="services-list">
           <li class="services-item service-item-delivery services-item-current">
@@ -219,23 +219,24 @@
       </section>
     </main>
     <footer class="main-footer">
-      <section class="main-footer-left">
-        <a class="main-footer-logo"><span class="visually-hidden">DEVICE</span></a>
-        <p class="main-footer-address">г. Москва, ул. Строителей, 15</p>
-      </section>
-      <section class="main-footer-center">
-        <ul class="main-footer-menu">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <div class="main-footer-social">
-          <a class="social-btn social-btn-fb" href="#"><span class="visually-hidden">Файсбук</span></a>
-          <a class="social-btn social-btn-inst" href="#"><span class="visually-hidden">Инстограм</span></a>
-          <a class="social-btn social-btn-tw" href="#"><span class="visually-hidden">Твитер</span></a>
-        </div>
-      </section>
-      <section class="main-footer-right">
+      <div class="footer-contener">
+        <section class="main-footer-left">
+          <a class="main-footer-logo"><span class="visually-hidden1">DEVICE</span></a>
+          <p class="main-footer-address">г. Москва, ул. Строителей, 15</p>
+        </section>
+        <section class="main-footer-center">
+          <ul class="main-footer-menu">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <div class="main-footer-social">
+            <a class="social-btn social-btn-fb" href="#"><span class="visually-hidden">Файсбук</span></a>
+            <a class="social-btn social-btn-inst" href="#"><span class="visually-hidden">Инстограм</span></a>
+            <a class="social-btn social-btn-tw" href="#"><span class="visually-hidden">Твитер</span></a>
+          </div>
+        </section>
+        <section class="main-footer-right">
         <ul class="footer-user-block">
           <li class="footer-user-enter"><a href="#">Войти</a></li>
           <li class="footer-user-compare"><a href="#">Сравнить</a></li>
@@ -244,6 +245,7 @@
         <p class="main-footer-phone">Тел.: +7 (495) 495-95-95</p>
         <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><span class="visually-hidden">Сайт HTML Academy</span></a>
       </section>
+      </div>
     </footer>
 
     <div class="modal modal-send-message">
