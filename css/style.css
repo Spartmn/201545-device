@@ -145,23 +145,47 @@ a {
 }
 
 .header-form-search {
-  padding-left: 20px;
+  position: relative;
+  padding-left: 35px;
 }
 
 .header-form-search::before {
   content: "";
-  position: relative;
-  left: -10px;
+  position: absolute;
+  top: 8px;
+  left: 0;
   width: 20px;
   height: 20px;
   background-image: url("../img/search.svg");
   background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 20px 20px;
+  background-position: 0 0;
 }
 
 .header-search-field {
+  border: none;
+  background: transparent;
   opacity: 0.3;
+}
+
+.header-search-field:hover {
+  opacity: 0.6;
+}
+
+.header-search-field:focus {
+  opacity: 1;
+}
+
+.header-form-search input[type="submit"] {
+  display: none;
+  width: 85px;
+  height: 45px;
+  margin-top: -10px;
+  border: 2px solid #000000;
+  background: transparent;
+}
+
+.header-form-search + input[type="submit"]:focus {
+  display: inline;
 }
 
 .header-user-block {
@@ -175,17 +199,64 @@ a {
 
 .header-user-block li {
   min-width: 100px;
-  margin-left: 20px;
 }
 
-.header-user-block .header-user-enter,
-.header-user-block .header-user-name {
-  margin-left: 0;
-  margin-right: auto;
+.header-user-name {
+  margin-right: 20px;
+}
+
+.header-user-cart {
+  position: relative;
+}
+
+.header-user-enter a::before,
+.header-user-name a::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-user-compare a::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-user-cart a::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-user-enter,
+.header-user-name,
+.header-user-compare {
+  position: relative;
+  padding-left: 25px;
   text-align: left;
 }
 
+.header-user-block .header-user-enter,
 .header-user-block .header-user-out {
+  margin-right: auto;
   text-align: left;
 }
 
@@ -224,6 +295,19 @@ a {
 
 .header-menu-catalog {
   position: relative;
+  padding-right: 30px;
+}
+
+.header-menu-catalog a::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .menu-catalog-hover {
