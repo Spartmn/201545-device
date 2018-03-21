@@ -72,17 +72,24 @@ a {
 
 .button,
 .btn {
+  display: flex;
+  width: 220px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
   font: inherit;
+  text-align: center;
   color: #000000;
   text-transform: uppercase;
   border: none;
+  background: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 }
 
 .button:hover,
 .button:focus,
 .btn:hover,
 .btn:focus {
-  background-color: #f7e296;
+  background-color: #f0c52e;
   border-width: 0;
 }
 
@@ -357,8 +364,6 @@ a {
 
 /*--TODO-MAIN BEGIN--*/
 .container {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   padding: 0 20px;
   width: 1160px;
@@ -512,29 +517,13 @@ a {
   background: linear-gradient(#ffffff 100px, #e5e5e5 100px);
 }
 
+.services .container {
+  display: flex;
+}
+
 .services ul {
   margin: 0;
   padding: 0;
-}
-
-.services::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 1160px;
-  width: 2000px;
-  height: 390px;
-  background: linear-gradient(#ffffff 100px, #e5e5e5 100px);
-}
-
-.services::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 1160px;
-  width: 2000px;
-  height: 390px;
-  background: linear-gradient(#ffffff 100px, #e5e5e5 100px);
 }
 
 .services-button {
@@ -547,18 +536,18 @@ a {
   border-right: 7px solid #000000;
 }
 
-.services-button .button {
+.services-button .service-button {
   width: 160px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   padding: 11px 0 11px 20px;
 }
 
-.services-button .button:hover,
-.services-button .button:focus {
+.services-button .service-button:hover,
+.services-button .service-button:focus {
   background-color: #f0c52e;
 }
 
-.services-button .button:active,
+.services-button .service-button:active,
 .services-button .services-button-current {
   width: 260px;
   color: #f7e184;
@@ -1247,7 +1236,6 @@ a {
 
 .footer-user-out {
   margin-left: 20px;
-  /*opacity: 0.3;*/
 }
 
 .footer-user-out span {
@@ -1341,12 +1329,6 @@ a {
 .footer-catalog-bottom {
   align-items: center;
   margin-bottom: 65px;
-}
-
-.footer-line {
-  width: 80px;
-  height: 7px;
-  background-color: #ffc600;
 }
 
 .main-footer-social {
