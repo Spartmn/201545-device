@@ -13,7 +13,8 @@
       <div class="navigation-top">
         <form class="header-form-search" action="https://echo.htmlacademy.ru" method="get">
           <input class="header-search-field" type="search" name="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-          <input class="visually-hidden" type="submit" value="Найти">
+          <input class="visually-hidden1" type="submit" value="Найти">
+          <div class="search-field-line"></div>
         </form>
         <ul class="header-user-block">
           <li class="header-user-name"><a href="#">Валентин Петухов</a></li>
@@ -78,19 +79,19 @@
               <legend>Цвет</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-black" name="color-black" type="checkbox" checked>
+                  <input class="visually-hidden filter-input-checkbox" id="color-input-black" name="color-black" type="checkbox" checked>
                   <label for="color-input-black">Черный</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" id="color-input-white" name="color-white" type="checkbox">
+                  <input class="visually-hidden filter-input-checkbox" id="color-input-white" name="color-white" type="checkbox" disabled>
                   <label for="color-input-white">Белый</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-blue" name="color-blue" type="checkbox" checked>
+                  <input class="visually-hidden filter-input-checkbox" id="color-input-blue" name="color-blue" type="checkbox" checked>
                   <label for="color-input-blue">Синий</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-red" name="color-red" type="checkbox" checked>
+                  <input class="visually-hidden filter-input-checkbox" id="color-input-red" name="color-red" type="checkbox" checked>
                   <label for="color-input-red">Красный</label>
                 </li>
                 <li class="filter-option">
@@ -103,7 +104,7 @@
               <legend>Bluetooth</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-radio filter-input-radio-checked" id="bluetooth-yes" type="radio" name="bluetooth-group" value="yes" checked>
+                  <input class="visually-hidden filter-input-radio" id="bluetooth-yes" type="radio" name="bluetooth-group" value="yes" checked>
                   <label for="bluetooth-yes">Есть</label>
                 </li>
                 <li class="filter-option">

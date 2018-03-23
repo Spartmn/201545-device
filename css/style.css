@@ -72,6 +72,8 @@ a {
 
 .button,
 .btn {
+  display: block;
+  box-sizing: border-box;
   width: 220px;
   height: 40px;
   padding: 8px 0;
@@ -152,6 +154,8 @@ a {
 .header-form-search {
   position: relative;
   padding-left: 35px;
+  width: 405px;
+  height: 40px;
 }
 
 .header-form-search::before {
@@ -167,6 +171,7 @@ a {
 }
 
 .header-search-field {
+  width: 300px;
   border: none;
   background: transparent;
   opacity: 0.3;
@@ -181,6 +186,9 @@ a {
 }
 
 .header-form-search input[type="submit"] {
+  position: absolute;
+  top: 5px;
+  right: 0;
   display: none;
   width: 85px;
   height: 45px;
@@ -189,8 +197,28 @@ a {
   background: transparent;
 }
 
-.header-form-search + input[type="submit"]:focus {
-  display: inline;
+.header-form-search input[type="submit"]:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.header-form-search input[type="submit"]:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-field-line {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 440px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.header-form-search .header-search-field:focus + input[type="submit"],
+.header-form-search .header-search-field:focus ~ .search-field-line {
+  display: block;
 }
 
 .header-user-block {
@@ -303,7 +331,7 @@ a {
   padding-right: 30px;
 }
 
-.header-menu-catalog a::after {
+.header-menu-catalog>a::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -324,10 +352,14 @@ a {
   width: 1160px;
   height: 115px;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 0;
   background-color: #f7e296;
   z-index: -1;
+}
+
+.header-menu-catalog a:hover + .menu-catalog-hover {
+  z-index: 1;
 }
 
 .menu-catalog-hover li {
@@ -535,9 +567,11 @@ a {
 }
 
 .services-button .service-button {
+  box-sizing: border-box;
   width: 160px;
   margin-bottom: 20px;
   padding: 11px 0 11px 20px;
+  letter-spacing: 0.2em;
 }
 
 .services-button .service-button:hover,
@@ -547,7 +581,7 @@ a {
 
 .services-button .service-button:active,
 .services-button .services-button-current {
-  width: 260px;
+  width: 280px;
   color: #f7e184;
   background-color: #000000;
 }
@@ -818,6 +852,7 @@ a {
 .filter-item {
   margin: 0;
   padding: 0;
+  width: 196px;
   text-transform: none;
 }
 
@@ -845,6 +880,7 @@ a {
 }
 
 .filter-option label {
+  position: relative;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -854,6 +890,7 @@ a {
 
 .filter-input-checkbox + label::before {
   content: "";
+  box-sizing: border-box;
   margin-top: 5px;
   margin-right: 20px;
   width: 27px;
@@ -864,20 +901,66 @@ a {
   background-position: top left;
 }
 
-.filter-input-checkbox-checked + label::before {
+.filter-input-checkbox:checked + label::before {
   content: "";
-  margin-top: 5px;
-  margin-right: 20px;
   width: 27px;
   height: 23px;
-  float: left;
+  border: none;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: top left;
 }
 
+.filter-input-checkbox:disabled + label,
+.filter-input-checkbox:disabled + label::before {
+  opacity: 0.25;
+}
+
+.filter-input-checkbox:not(:disabled) + label:hover::before,
+.filter-input-checkbox:not(:disabled) + label:focus::before {
+  opacity: 0.6;
+}
+
 .filter-range-control {
+  position: relative;
   margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.range-scale {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #dbdbdb;
+}
+
+.range-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background-color: #91c92f;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 20px;
+  height: 23px;
+  margin-left: -10px;
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 60%;
 }
 
 .filter-range-value {
@@ -890,19 +973,17 @@ a {
 }
 
 .range-min-price input {
-  width: 70px;
+  /*width: 70px;*/
 }
 
-.filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:focus::before {
-  opacity: 0.6;
-}
+
 
 .filter-range-value input {
+  width: 70px;
   border-width: 0;
 }
 
-.filter-input-radio+label::before {
+.filter-input-radio + label::before {
   content: "";
   width: 25px;
   height: 25px;
@@ -914,24 +995,20 @@ a {
   background-position: top left;
 }
 
-.filter-input-radio-checked+label::before {
+.filter-input-radio:checked+label::before {
   content: "";
-  width: 25px;
-  height: 25px;
-  margin-top: 5px;
-  margin-right: 20px;
-  float: left;
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: top left;
 }
 
-.filter-input-radio+label:hover::before,
-.filter-input-radio+label:focus::before {
+.filter-input-radio:not(:disabled) + label:hover::before,
+.filter-input-radio:not(:disabled) + label:focus::before {
   opacity: 0.6;
 }
 
-.filter-input-radio+label:disabled {
+.filter-input-radio:disabled + label,
+.filter-input-radio:disabled + label::before {
   opacity: 0.25;
 }
 
@@ -1452,10 +1529,15 @@ a {
 
 /*--TODO-MODAL BEGIN--*/
 .modal {
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 10px auto;
   width: 760px;
   box-shadow: 0 0 20px 0 rgba(4, 6, 6, 0.2);
+  background-color: #ffffff;
+  z-index: 10;
 }
 
 .modal-close {
@@ -1485,6 +1567,7 @@ a {
 }
 
 .modal-send-message {
+  display: none;
   padding: 95px 100px 80px 100px;
 }
 
@@ -1563,7 +1646,7 @@ a {
 }
 
 .modal-map {
-
+  display: none;
   width: 960px;
   height: 560px;
 }

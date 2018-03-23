@@ -14,6 +14,7 @@
           <form class="header-form-search" action="https://echo.htmlacademy.ru" method="get">
             <input class="header-search-field" type="search" name="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
             <input type="submit" value="Найти">
+            <div class="search-field-line"></div>
           </form>
           <ul class="header-user-block">
             <li class="header-user-enter"><a href="#">Войти</a></li>
@@ -67,7 +68,7 @@
               <p>Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
-              <a class="button" href="#"><span>Подробнее</span></a>
+              <a class="button" href="#">Подробнее</a>
               <ul class="slider-features">
                 <li>
                   <p class="slider-feature-value">8,5 м</p>
@@ -156,68 +157,68 @@
         </a>
       </section>
     </div>
-      <section class="services">
-        <div class="container">
-          <h2 class="visually-hidden">Сервисы</h2>
-          <ul>
-            <li class="services-item-input"><input class="visually-hidden" id="delivery" type="radio" name="services-group" value="delivery" checked></li>
-            <li class="services-item-input"><input class="visually-hidden" id="warranty" type="radio" name="services-group" value="warranty"></li>
-            <li class="services-item-input"><input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit"></li>
-          </ul>
-          <div class="services-button">
-            <label for="delivery" class="service-button services-button-current" tabindex="0">Доставка</label>
-            <label for="warranty" class="service-button" tabindex="0">Гарантия</label>
-            <label for="credit" class="service-button" tabindex="0">Кредит</label>
-          </div>
-          <ul class="services-list">
-            <li class="services-item service-item-delivery services-item-current">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-                заработаем, поднимая его на ваш этаж.</p>
-            </li>
-            <li class="services-item service-item-warranty">
-              <h3>Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-                Товар, не дом, конечно же.</p>
-            </li>
-            <li class="services-item service-item-credit">
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
-                условия кредита. Выгодные для нашего банка, разумеется.</p>
-            </li>
-          </ul>
+    <section class="services">
+      <div class="container">
+        <h2 class="visually-hidden">Сервисы</h2>
+        <ul>
+          <li class="services-item-input"><input class="visually-hidden" id="delivery" type="radio" name="services-group" value="delivery" checked></li>
+          <li class="services-item-input"><input class="visually-hidden" id="warranty" type="radio" name="services-group" value="warranty"></li>
+          <li class="services-item-input"><input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit"></li>
+        </ul>
+        <div class="services-button">
+          <label for="delivery" class="service-button services-button-current" tabindex="0">Доставка</label>
+          <label for="warranty" class="service-button" tabindex="0">Гарантия</label>
+          <label for="credit" class="service-button" tabindex="0">Кредит</label>
         </div>
-      </section>
-      <section class="logotypes container">
-        <h2 class="visually-hidden">Логотипы</h2>
-        <a class="logotypes-item logo-dji" href="#"><img src="img/logo-1-color.png" alt="DJI" width="260" height="100">        </a>
-        <a class="logotypes-item logo-spgadgets" href="#"><img src="img/logo-2-color.png" alt="SP Gadgets" width="260" height="100"></a>
-        <a class="logotypes-item logo-gopro" href="#"><img src="img/logo-3-color.png" alt="GoPro" width="260" height="100"></a>
-        <a class="logotypes-item logo-vive" href="#"><img src="img/logo-4-color.png" alt="Vivi" width="260" height="100"></a>
-      </section>
-      <section class="main-content container">
-        <div class="info">
-          <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
-            компаниями:</p>
-          <ul>
-            <li>Деловые Линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
-          </ul>
-          <a class="button" href="#">Подробнее о нас</a>
-        </div>
-        <div class="contact">
-          <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
-            бывает.</p>
-          <a id="js-view-map" href="#">
-            <img src="img/map.jpg" alt="Офис находится по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
-          </a>
-          <a class="button" id="js-us" href="#">Напишите нам</a>
-        </div>
-      </section>
+        <ul class="services-list">
+          <li class="services-item service-item-delivery services-item-current">
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
+              заработаем, поднимая его на ваш этаж.</p>
+          </li>
+          <li class="services-item service-item-warranty">
+            <h3>Гарантия</h3>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.</p>
+          </li>
+          <li class="services-item service-item-credit">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+              условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="logotypes container">
+      <h2 class="visually-hidden">Логотипы</h2>
+      <a class="logotypes-item logo-dji" href="#"><img src="img/logo-1-color.png" alt="DJI" width="260" height="100">        </a>
+      <a class="logotypes-item logo-spgadgets" href="#"><img src="img/logo-2-color.png" alt="SP Gadgets" width="260" height="100"></a>
+      <a class="logotypes-item logo-gopro" href="#"><img src="img/logo-3-color.png" alt="GoPro" width="260" height="100"></a>
+      <a class="logotypes-item logo-vive" href="#"><img src="img/logo-4-color.png" alt="Vivi" width="260" height="100"></a>
+    </section>
+    <section class="main-content container">
+      <div class="info">
+        <h2>О нас</h2>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+          компаниями:</p>
+        <ul>
+          <li>Деловые Линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="button" href="#">Подробнее о нас</a>
+      </div>
+      <div class="contact">
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
+          бывает.</p>
+        <a id="js-view-map" href="#">
+          <img src="img/map.jpg" alt="Офис находится по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
+        </a>
+        <a class="button" id="js-us" href="#">Напишите нам</a>
+      </div>
+    </section>
     <footer class="main-footer">
       <div class="container">
         <div class="footer-catalog-top">
