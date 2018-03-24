@@ -91,6 +91,7 @@ a {
 .btn:focus {
   background-color: #f0c52e;
   border-width: 0;
+  transition: 0.5s;
 }
 
 .button:active,
@@ -361,6 +362,7 @@ a {
 .header-menu-catalog a:hover + .menu-catalog-hover,
 .header-menu-catalog a:focus + .menu-catalog-hover{
   z-index: 1;
+  transition: 0.5s;
 }
 
 .menu-catalog-hover li {
@@ -430,7 +432,6 @@ a {
 
 .slider-option label::before {
   content: "";
-  /*float: left;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -571,6 +572,7 @@ a {
 
 .populars-item div:hover,
 .populars-item div:focus {
+  transition: 0.5s;
   background-color: rgba(240, 197, 46, 1);
 }
 
@@ -619,6 +621,7 @@ a {
 .services-button .service-button:hover,
 .services-button .service-button:focus {
   background-color: #f0c52e;
+  transition: 0.5s;
 }
 
 .services-button .service-button:active,
@@ -730,6 +733,7 @@ a {
 .logotypes-item img:hover {
   filter: grayscale(0);
   opacity: 1;
+  transition: 0.5s;
 }
 
 .main-content {
@@ -866,6 +870,7 @@ a {
 .sorting h2 {
   margin: 0;
   font-size: 16px;
+  letter-spacing: 0.2em;
 }
 
 .sidebar-title::before {
@@ -1014,12 +1019,6 @@ a {
   opacity: 0.2;
 }
 
-.range-min-price input {
-  /*width: 70px;*/
-}
-
-
-
 .filter-range-value input {
   width: 70px;
   border-width: 0;
@@ -1027,8 +1026,8 @@ a {
 
 .filter-input-radio + label::before {
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   margin-top: 5px;
   margin-right: 20px;
   float: left;
@@ -1085,7 +1084,7 @@ a {
 .catalog-sorting {
   display: flex;
   align-items: center;
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 30px;
   padding: 0;
 }
 
@@ -1168,6 +1167,7 @@ a {
   top: 180px;
   left: 80px;
   text-align: center;
+  z-index: 2;
 }
 
 .btn-compare {
@@ -1188,6 +1188,21 @@ a {
 
 .btn-compare:active {
   opacity: 0.2;
+}
+
+.catalog-item-info {
+  position: relative;
+}
+
+.catalog-item-info a:after {
+  content: "";
+  /*display: none;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 380px;
+  background-color: rgba(238, 238, 238, 0.7);
 }
 
 .catalog-info-text {
