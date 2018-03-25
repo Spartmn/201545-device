@@ -7,8 +7,8 @@
     <title>Девайс - Главная страница</title>
   </head>
   <body>
-    <div class="container">
-      <header class="main-header">
+    <!--<div class="container">-->
+      <header class="main-header container">
         <a class="main-header-logo"><span class="visually-hidden1">DEVICE</span></a>
         <div class="navigation-top">
           <form class="header-form-search" action="https://echo.htmlacademy.ru" method="get">
@@ -47,7 +47,7 @@
           </ul>
         </nav>
       </header>
-      <section class="product-slider">
+      <section class="product-slider container">
         <h2 class="visually-hidden">Слайдер товаров</h2>
         <div class="slider-list-button">
           <div class="slider-option">
@@ -135,7 +135,7 @@
           </li>
         </ul>
       </section>
-      <section class="populars">
+      <section class="populars container">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <a class="populars-item" href="#">
           <div><img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55"></div>
@@ -162,19 +162,17 @@
           <h3>Квадрокоптеры</h3>
         </a>
       </section>
-    </div>
+    <!--</div>-->
     <section class="services">
       <div class="container">
         <h2 class="visually-hidden">Сервисы</h2>
-        <ul>
-          <li class="services-item-input"><input class="visually-hidden" id="delivery" type="radio" name="services-group" value="delivery" checked></li>
-          <li class="services-item-input"><input class="visually-hidden" id="warranty" type="radio" name="services-group" value="warranty"></li>
-          <li class="services-item-input"><input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit"></li>
-        </ul>
         <div class="services-button">
-          <label for="delivery" class="service-button services-button-current" tabindex="0">Доставка</label>
-          <label for="warranty" class="service-button" tabindex="0">Гарантия</label>
-          <label for="credit" class="service-button" tabindex="0">Кредит</label>
+          <input class="visually-hidden" id="delivery" type="radio" name="services-group" value="delivery" checked>
+          <label for="delivery" class="button" tabindex="0">Доставка</label>
+          <input class="visually-hidden" id="warranty" type="radio" name="services-group" value="warranty">
+          <label for="warranty" class="button" tabindex="0">Гарантия</label>
+          <input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit">
+          <label for="credit" class="button" tabindex="0">Кредит</label>
         </div>
         <ul class="services-list">
           <li class="services-item service-item-delivery services-item-current">
