@@ -183,6 +183,7 @@ a {
   border: none;
   background: transparent;
   opacity: 0.3;
+  outline: none;
 }
 
 .header-search-field:hover {
@@ -226,6 +227,11 @@ a {
 
 .header-form-search .header-search-field:focus + input[type="submit"],
 .header-form-search .header-search-field:focus ~ .search-field-line {
+  display: block;
+}
+
+.header-form-search input[type="submit"]:hover,
+.header-form-search input[type="submit"]:hover + .search-field-line {
   display: block;
 }
 
@@ -420,7 +426,7 @@ a {
   list-style: none;
 }
 
-.slider-list-button {
+.slider-control {
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -435,11 +441,9 @@ a {
   position: relative;
 }
 
-.slider-option label::before {
+.slider-control label::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 12px;
   height: 12px;
   background-image: url("../img/slider-button-empty.svg");
@@ -448,10 +452,22 @@ a {
   background-position: 0 0;
 }
 
-.slider-option input[type="radio"]:checked + label::before{
+#slider-1:checked ~ .slider-control .label-slider-1::before,
+#slider-2:checked ~ .slider-control .label-slider-2::before,
+#slider-3:checked ~ .slider-control .label-slider-3::before {
   content: "";
   background-image: url("../img/slider-button.svg");
   background-size: 12px 12px;
+}
+
+#slider-1:checked ~ .product-slider-list .slider-item:nth-child(1),
+#slider-2:checked ~ .product-slider-list .slider-item:nth-child(2),
+#slider-3:checked ~ .product-slider-list .slider-item:nth-child(3) {
+  z-index: 0;
+}
+
+.slider-control input[type="radio"]:checked ~ .product-slider-list {
+  display: flex;
 }
 
 .product-slider-list {
@@ -466,10 +482,6 @@ a {
   min-height: 485px;
   background: linear-gradient(#f7e296 110px, #ffffff 110px);
   z-index: -1;
-}
-
-.slider-item-1 {
-  z-index: 0;
 }
 
 .slider-img {
@@ -614,7 +626,7 @@ a {
   padding: 0;
 }
 
-.services-button {
+.services-control {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -624,7 +636,7 @@ a {
   border-right: 7px solid #000000;
 }
 
-.services-button .button {
+.services-control .button {
   position: relative;
   box-sizing: border-box;
   width: 160px;
@@ -632,18 +644,15 @@ a {
   letter-spacing: 0.2em;
 }
 
-.services-button input:checked + .button {
+#delivery:checked ~ .services-control .button:nth-child(1),
+#warranty:checked ~ .services-control .button:nth-child(2),
+#credit:checked ~ .services-control .button:nth-child(3) {
   width: 160px;
   color: #f7e184;
   background: #000000;
 }
 
-.services-button input:checked + .button::after {
-  width: 113px;
-  transition: 0.5s;
-}
-
-.services-button .button::after {
+.services-control .button::after {
   content: "";
   position: absolute;
   width: 0;
@@ -653,19 +662,27 @@ a {
   background-color: #000000;
 }
 
-#delivery:checked ~ .services-item {
+#delivery:checked ~ .services-control .button:nth-child(1)::after,
+#warranty:checked ~ .services-control .button:nth-child(2)::after,
+#credit:checked ~ .services-control .button:nth-child(3)::after {
+  width: 113px;
+  transition: 0.5s;
+}
+
+#delivery:checked ~ .services-list .services-item {
   left: 0;
   width: 260px;
-  color: #f7e184;
-  background-color: #000000;
+  transition: 0.5s;
 }
 
-#warranty:checked ~ .services-item {
+#warranty:checked ~ .services-list .services-item {
   left: -880px;
+  transition: 0.5s;
 }
 
-#credit:checked ~ .services-item {
+#credit:checked ~ .services-list .services-item {
   left: -1760px;
+  transition: 0.5s;
 }
 
 .services-list {
@@ -1625,7 +1642,6 @@ a {
 /*--TODO-MODAL BEGIN--*/
 .modal {
   position: fixed;
-  /*transform: translate(-50%, -50%);*/
   top: 50%;
   left: 50%;
   margin-left: -480px;
@@ -1761,16 +1777,34 @@ a {
   100% { transform: translateY(0); }
 }
 
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.modal-map {
+  display: none;
+  width: 960px;
+  height: 560px;
+}
+
+.modal-map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .modal-show {
   display: block;
   animation-name: bounce;
   animation-duration: 0.6s;
 }
 
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-  20%, 40%, 60%, 80% { transform: translateX(10px); }
+.overlay-show {
+  display: block;
+  animation-duration: 0.6s;
 }
 
 .modal-error {
@@ -1778,10 +1812,8 @@ a {
   animation-duration: 0.6s;
 }
 
-.modal-map {
-  display: none;
-  width: 960px;
-  height: 560px;
+.field-error {
+  background-color: #edb5b5;
 }
 /*--MODAL END--*/
 /*-TODO-INDEX PAGE END-*/

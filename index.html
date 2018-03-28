@@ -48,19 +48,13 @@
   </header>
   <section class="product-slider container">
     <h2 class="visually-hidden">Слайдер товаров</h2>
-    <div class="slider-list-button">
-      <div class="slider-option">
-        <input class="visually-hidden" id="slider-1" type="radio" name="slider-group" value="slider-1" checked>
-        <label for="slider-1"><span class="visually-hidden">Слайд 1</span></label>
-      </div>
-      <div class="slider-option">
-        <input class="visually-hidden" id="slider-2" type="radio" name="slider-group" value="slider-2">
-        <label for="slider-2"><span class="visually-hidden">Слайд 2</span></label>
-      </div>
-      <div class="slider-option">
-        <input class="visually-hidden" id="slider-3" type="radio" name="slider-group" value="slider-3">
-        <label for="slider-3"><span class="visually-hidden">Слайд 3</span></label>
-      </div>
+    <input class="visually-hidden" id="slider-1" type="radio" name="slider-group" value="slider-1" checked>
+    <input class="visually-hidden" id="slider-2" type="radio" name="slider-group" value="slider-2">
+    <input class="visually-hidden" id="slider-3" type="radio" name="slider-group" value="slider-3">
+    <div class="slider-control">
+      <label class="label-slider-1" for="slider-1"><span class="visually-hidden">Слайд 1</span></label>
+      <label class="label-slider-2" for="slider-2"><span class="visually-hidden">Слайд 2</span></label>
+      <label class="label-slider-3" for="slider-3"><span class="visually-hidden">Слайд 3</span></label>
     </div>
     <ul class="product-slider-list">
       <li class="slider-item slider-item-1">
@@ -161,12 +155,12 @@
   <section class="services">
     <div class="container">
       <h2 class="visually-hidden">Сервисы</h2>
-      <div class="services-button">
-        <input class="visually-hidden" id="delivery" type="radio" name="services-group" value="delivery" checked>
+      <input class="visually-hidden" id="delivery" type="radio" name="services-group" value="delivery" checked>
+      <input class="visually-hidden" id="warranty" type="radio" name="services-group" value="warranty">
+      <input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit">
+      <div class="services-control">
         <label for="delivery" class="button" tabindex="0">Доставка</label>
-        <input class="visually-hidden" id="warranty" type="radio" name="services-group" value="warranty">
         <label for="warranty" class="button" tabindex="0">Гарантия</label>
-        <input class="visually-hidden" id="credit" type="radio" name="services-group" value="credit">
         <label for="credit" class="button" tabindex="0">Кредит</label>
       </div>
       <ul class="services-list">
@@ -254,17 +248,19 @@
       <label for="text-input">Текст письма:<br><textarea class="message-textarea" id="text-input" name="message" placeholder="В свободной форме" rows="6"></textarea></label>
       <button class="button" type="submit">Отправить</button>
     </form>
-    <button class="modal-close"><span class="visually-hidden">Закрыть форму</span></button>
+    <button class="modal-close message-close"><span class="visually-hidden">Закрыть форму</span></button>
   </div>
 
   <div class="modal modal-map">
     <h2 class="visually-hidden">Где мы находимся</h2>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBexBEWnGA" width="960" height="559" frameborder="0"></iframe>
+
     <img src="img/map-big.jpg" width="960" height="559" alt="Мы находимся по аресу г. Москва, ул. Строителей, 15">
-    <button class="modal-close"><span class="visually-hidden">Закрыть карту</span></button>
+    <button class="modal-close map-close"><span class="visually-hidden">Закрыть карту</span></button>
   </div>
 
   <div class="modal-overlay"></div>
 
-  <script src="js/modal.js"></script>
+  <script src="js/popup.js"></script>
 </body>
 </html>
