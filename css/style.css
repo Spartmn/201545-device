@@ -878,7 +878,7 @@ a {
 .main-wrapper {
   position: relative;
   min-width: 1160px;
-  padding-top: 40px;
+  padding-top: 33px;
   background-color: #ffffff;
 }
 
@@ -889,14 +889,16 @@ a {
 .page-title {
   margin: 0;
   margin-left: 60px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   font-size: 47px;
   line-height: 48px;
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
 .breadcrumbs {
   display: flex;
-  margin: 0 0 50px 60px;
+  margin: 0 0 47px 60px;
   padding: 0;
   list-style: none;
   font-family: "Open Sans", Arial, sans-serif;
@@ -907,8 +909,10 @@ a {
 }
 
 .breadcrumbs a {
+  position: relative;
   color: #000000;
   opacity: 0.3;
+  padding-right: 20px;
 }
 
 .breadcrumbs a:hover,
@@ -921,12 +925,18 @@ a {
 }
 
 .breadcrumbs a::after {
-  margin: 10px 15px 0 15px;
   content: "";
-  float: right;
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 0;
   background-image: url("../img/nav-arrow.svg");
   width: 4px;
   height: 7px;
+}
+
+.breadcrumbs li {
+  margin-right: 18px;
 }
 
 .page-content-title {
@@ -991,7 +1001,7 @@ a {
 .filter-cost,
 .filter-color,
 .filter-bluetooth {
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   border-width:  0;
 }
 
@@ -999,9 +1009,9 @@ a {
 .filter-color legend,
 .filter-bluetooth legend {
   width: 200px;
-  padding-top: 15px;
+  padding-top: 10px;
   border-top: 2px solid #000000;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .filter-color ul,
@@ -1011,23 +1021,37 @@ a {
   list-style: none;
 }
 
+.filter-option {
+  /*position: relative;*/
+  height: 25px;
+  margin-bottom: 15px;
+}
+
+.filter-color .filter-option:nth-last-child(1) {
+  margin-bottom: 5px;
+}
+
 .filter-option label {
   position: relative;
+  padding-left: 40px;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
-  line-height: 40px;
   text-transform: none;
 }
 
+
+
 .filter-input-checkbox + label::before {
   content: "";
-  box-sizing: border-box;
-  margin-top: 5px;
-  margin-right: 20px;
+  position: absolute;
+  left: 0;
+  /*box-sizing: border-box;*/
+  /*margin-top: 5px*/;
+  /*margin-right: 20px;*/
   width: 27px;
   height: 23px;
-  float: left;
+  /*float: left;*/
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: top left;
@@ -1040,6 +1064,8 @@ a {
 
 .filter-input-checkbox:checked + label::before {
   content: "";
+  position: absolute;
+  display: block;
   width: 27px;
   height: 23px;
   border: none;
@@ -1061,7 +1087,7 @@ a {
 .filter-range-control {
   position: relative;
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .range-scale {
@@ -1116,11 +1142,13 @@ a {
 
 .filter-input-radio + label::before {
   content: "";
+  position: absolute;
+  left: 0;
   width: 26px;
   height: 26px;
-  margin-top: 5px;
+  /*margin-top: 5px;
   margin-right: 20px;
-  float: left;
+  float: left;*/
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: top left;
@@ -1129,6 +1157,10 @@ a {
 .filter-input-radio:focus + label::before {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filter-bluetooth {
+  margin-bottom: 25px;
 }
 
 .filter-input-radio:checked+label::before {
