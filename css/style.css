@@ -500,17 +500,17 @@ a {
   background-position: 0 0;
 }
 
-#slider-1:checked ~ .slider-control .label-slider-1::before,
-#slider-2:checked ~ .slider-control .label-slider-2::before,
-#slider-3:checked ~ .slider-control .label-slider-3::before {
+.product-slider input[value="slider-1"]:checked ~ .slider-control .label-slider-1::before,
+.product-slider input[value="slider-2"]:checked ~ .slider-control .label-slider-2::before,
+.product-slider input[value="slider-3"]:checked ~ .slider-control .label-slider-3::before {
   content: "";
   background-image: url("../img/slider-button.svg");
   background-size: 12px 12px;
 }
 
-#slider-1:checked ~ .product-slider-list .slider-item:nth-child(1),
-#slider-2:checked ~ .product-slider-list .slider-item:nth-child(2),
-#slider-3:checked ~ .product-slider-list .slider-item:nth-child(3) {
+.product-slider input[value="slider-1"]:checked ~ .product-slider-list .slider-item:nth-child(1),
+.product-slider input[value="slider-2"]:checked ~ .product-slider-list .slider-item:nth-child(2),
+.product-slider input[value="slider-3"]:checked ~ .product-slider-list .slider-item:nth-child(3) {
   z-index: 0;
 }
 
@@ -746,9 +746,9 @@ a {
   letter-spacing: 0.2em;
 }
 
-#delivery:checked ~ .services-control .button:nth-child(1),
-#warranty:checked ~ .services-control .button:nth-child(2),
-#credit:checked ~ .services-control .button:nth-child(3) {
+.services input[value="delivery"]:checked ~ .services-control .button:nth-child(1),
+.services input[value="warranty"]:checked ~ .services-control .button:nth-child(2),
+.services input[value="credit"]:checked ~ .services-control .button:nth-child(3) {
   width: 160px;
   color: #f7e184;
   background: #000000;
@@ -764,16 +764,16 @@ a {
   background-color: #000000;
 }
 
-#delivery:checked ~ .services-control .button:nth-child(1)::after,
-#warranty:checked ~ .services-control .button:nth-child(2)::after,
-#credit:checked ~ .services-control .button:nth-child(3)::after {
+.services input[value="delivery"]:checked ~ .services-control .button:nth-child(1)::after,
+.services input[value="warranty"]:checked ~ .services-control .button:nth-child(2)::after,
+.services input[value="credit"]:checked ~ .services-control .button:nth-child(3)::after {
   width: 118px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-#delivery:checked ~ .services-list .services-item {
+.services input[value="delivery"]:checked ~ .services-list .services-item {
   left: 0;
   width: 260px;
   -webkit-transition: 0.5s;
@@ -781,14 +781,14 @@ a {
   transition: 0.5s;
 }
 
-#warranty:checked ~ .services-list .services-item {
+.services input[value="warranty"]:checked ~ .services-list .services-item {
   left: -880px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-#credit:checked ~ .services-list .services-item {
+.services input[value="credit"]:checked ~ .services-list .services-item {
   left: -1760px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
