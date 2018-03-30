@@ -21,7 +21,6 @@ try {
   isStorageSupport = false;
 }
 
-/*События на форме сообщений*/
 link_message.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup_message.classList.add("modal-show");
@@ -106,8 +105,6 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-/*События на попапе карты*/
 
 link_map.addEventListener("click", function (evr) {
   evr.preventDefault();
